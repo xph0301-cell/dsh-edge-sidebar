@@ -1,0 +1,25 @@
+{
+  "name": "dsh-edge-sidebar",
+  "version": "0.2.2",
+  "private": true,
+  "type": "module",
+  "description": "Real Microsoft Edge docked into a DSH right-sidebar tab: the whole Edge window (title bar, tabs, address bar) is placed exactly onto the sidebar pane body, below the app header. Native browser control — no iframe, no canvas, no projection.",
+  "keywords": ["dsh-plugin", "deepseek-harness", "edge", "cdp"],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "client.js", "cordis.patch.yml", "README.md"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}

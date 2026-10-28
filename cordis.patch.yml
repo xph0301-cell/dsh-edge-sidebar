@@ -1,0 +1,9 @@
+# dsh-edge-sidebar bundle patch.
+#
+# One row, named after the PACKAGE ROOT on purpose: the host's client-module scan
+# resolves a loader row's specifier to a package root and reads `dsh.client` from
+# there. A row named after a subpath would mount the host half while the sidebar tab
+# silently never appeared.
+- insert:
+    - id: dsh-edge-sidebar
+      name: dsh-edge-sidebar
